@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
             var newUrl = currentURL.replace(/profile_image-70x70.png/g, "profile_image-300x300.png");
 
             // Der HTML-Code, der in der neuen Seite angezeigt werden soll
-            var newHTML = '<html><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE-edge"><title>Twitch profile pic upscaler</title></head><body>Hier ist der Link: <a href="' + currentURL + '">' + currentURL + '</a><br><img src="' + newUrl + '" width="300" height="300"></body></html>';
+            var newHTML = '<html><head><style> body {background-color:#372b25;} </style><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Twitch profile pic upscaler</title></head><body>Hier ist der Link: <a href="' + currentURL + '">' + currentURL + '</a><br><img src="' + newUrl + '" width="300" height="300"></body></html>';
 
             // Erstellen einer Blob-URL aus dem HTML-Code
             var blob = new Blob([newHTML], { type: 'text/html' });
